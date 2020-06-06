@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/loginPage">
+    <fragment
+        android:id="@+id/loginPage"
+        android:name="shubhamji.com.newspaper.LoginPage"
+        android:label="LoginPage"
+        tools:layout="@layout/loginpage">
+        <action
+            android:id="@+id/action_loginPage_to_startup"
+            app:destination="@id/startup"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_loginPage_to_investor2"
+            app:destination="@id/investor" />
+    </fragment>
+    <fragment
+        android:id="@+id/investor"
+        android:name="shubhamji.com.newspaper.investor.investor"
+        android:label="investor"
+        tools:layout="@layout/investor">
+        <argument
+            android:name="NewsHeadLine"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/startup"
+        android:name="shubhamji.com.newspaper.startup.startup"
+        android:label="startup"
+        tools:layout="@layout/startup">
+        <action
+            android:id="@+id/action_startup_to_investor2"
+            app:destination="@id/investor"
+            app:popUpTo="@id/loginPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_about"
+        android:name="shubhamji.com.newspaper.Fragment_about"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+</navigation>
