@@ -28,7 +28,6 @@ class LoginPage: Fragment() {
             )
 
         }
-        Timber.i("OncreateView called")
         binding.startupbutton.setOnClickListener{view :View->
             view.findNavController().navigate(R.id.action_loginPage_to_startup)
         }
