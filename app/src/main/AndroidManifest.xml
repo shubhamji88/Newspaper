@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="shubhamji.com.newspaper">
-
+<uses-permission android:name="android.permission.INTERNET"></uses-permission>
     <application
         android:name=".NewsApplication"
         android:allowBackup="true"

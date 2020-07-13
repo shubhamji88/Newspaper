@@ -1,6 +1,6 @@
 package shubhamji.com.newspaper.network
 
-data class NewsList(
+data class NewsListTemp(
 val status: String?=null,
 val totalResults :Int?=null,
 val articles: List<NewsData>?=null

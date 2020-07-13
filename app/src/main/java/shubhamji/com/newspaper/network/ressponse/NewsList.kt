@@ -1,8 +1,8 @@
-package shubhamji.com.newspaper.database
+package shubhamji.com.newspaper.network.ressponse
 
 
 import com.google.gson.annotations.SerializedName
-import shubhamji.com.newspaper.network.ressponse.Article
+import shubhamji.com.newspaper.database.Article
 
 data class NewsList(
     @SerializedName("articles")
