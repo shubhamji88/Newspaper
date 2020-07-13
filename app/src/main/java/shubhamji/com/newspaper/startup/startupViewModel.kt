@@ -4,7 +4,7 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import kotlinx.coroutines.*
-import shubhamji.com.newspaper.database.databaseDAO
+import shubhamji.com.newspaper.database.dao.databaseDAO
 import shubhamji.com.newspaper.database.News
 
 class startupViewModel(

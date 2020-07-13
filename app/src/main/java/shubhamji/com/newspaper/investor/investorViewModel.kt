@@ -3,7 +3,7 @@ package shubhamji.com.newspaper.investor
 import android.app.Application
 import androidx.lifecycle.*
 import kotlinx.coroutines.*
-import shubhamji.com.newspaper.database.databaseDAO
+import shubhamji.com.newspaper.database.dao.databaseDAO
 import shubhamji.com.newspaper.network.NewsApi
 import shubhamji.com.newspaper.network.ressponse.NewsList
 import java.lang.Exception
@@ -25,7 +25,6 @@ class investorViewModel(
         coroutineScope.launch {
             val getPropertiesDeferred=NewsApi.retrifitService.getNews()
             try{
-
                 val listResult=getPropertiesDeferred.await()
                 _news.value=listResult
 

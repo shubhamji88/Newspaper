@@ -1,10 +1,11 @@
-package shubhamji.com.newspaper.database
+package shubhamji.com.newspaper.database.dao
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
+import shubhamji.com.newspaper.database.News
 
 @Dao
 interface databaseDAO {

@@ -4,11 +4,14 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import shubhamji.com.newspaper.database.dao.databaseDAO
 
 @Database(entities = [News::class],version = 1,exportSchema = false)
 abstract class NewsDatabase : RoomDatabase()
 {
     abstract val newsdatabaseDAO: databaseDAO
+//    abstract val internetdao: internetdao
+
     companion object{
         @Volatile
         private var INSTANCE : NewsDatabase?=null

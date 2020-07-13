@@ -3,7 +3,7 @@ package shubhamji.com.newspaper.investor
 import android.app.Application
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import shubhamji.com.newspaper.database.databaseDAO
+import shubhamji.com.newspaper.database.dao.databaseDAO
 
 class investorViewModelFactory(
     private val dataSource: databaseDAO,
