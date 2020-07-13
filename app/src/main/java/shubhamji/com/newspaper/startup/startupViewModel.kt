@@ -5,7 +5,7 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import kotlinx.coroutines.*
 import shubhamji.com.newspaper.database.dao.databaseDAO
-import shubhamji.com.newspaper.database.News
+import shubhamji.com.newspaper.database.entity.News
 
 class startupViewModel(
     val database: databaseDAO,
@@ -41,7 +41,7 @@ class startupViewModel(
     fun addnews(title: String,body: String)
     {
         uiScope.launch {
-            val News= News( )
+            val News= News()
             News.headline=title
             News.body=body
             insert(News)

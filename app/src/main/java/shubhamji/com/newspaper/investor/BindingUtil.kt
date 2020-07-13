@@ -2,7 +2,7 @@ package shubhamji.com.newspaper.investor
 
 import android.widget.TextView
 import androidx.databinding.BindingAdapter
-import shubhamji.com.newspaper.database.News
+import shubhamji.com.newspaper.database.entity.News
 
 @BindingAdapter("headline")
 fun TextView.head(item: News)

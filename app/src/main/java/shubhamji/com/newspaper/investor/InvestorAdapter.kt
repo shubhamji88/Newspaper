@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import shubhamji.com.newspaper.R
-import shubhamji.com.newspaper.database.News
+import shubhamji.com.newspaper.database.entity.News
 import shubhamji.com.newspaper.databinding.ListBinding
 private val ITEM_VIEW_TYPE_HEADER = 0
 private val ITEM_VIEW_TYPE_ITEM = 1
@@ -52,7 +52,7 @@ class InvestorAdapter(val clickListnerimg: ClickListnerImage): ListAdapter<DataI
                 return ViewHolder(view)
             }
         }
-        fun bind(item: News,clickListnerimg: ClickListnerImage) {
+        fun bind(item: News, clickListnerimg: ClickListnerImage) {
             binding.imageClick=clickListnerimg
             binding.newss=item
 

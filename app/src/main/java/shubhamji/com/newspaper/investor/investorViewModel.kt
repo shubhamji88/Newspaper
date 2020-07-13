@@ -27,7 +27,6 @@ class investorViewModel(
             try{
                 val listResult=getPropertiesDeferred.await()
                 _news.value=listResult
-
             } catch (e :Exception){
                 _news.value=ArrayList()
             }

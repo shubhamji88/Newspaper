@@ -1,4 +1,4 @@
-package shubhamji.com.newspaper.database
+package shubhamji.com.newspaper.database.entity
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

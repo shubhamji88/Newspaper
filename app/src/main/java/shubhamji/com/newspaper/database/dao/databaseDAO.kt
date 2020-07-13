@@ -5,7 +5,7 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
-import shubhamji.com.newspaper.database.News
+import shubhamji.com.newspaper.database.entity.News
 
 @Dao
 interface databaseDAO {
