@@ -1,12 +1,8 @@
-package shubhamji.com.newspaper.database
+package shubhamji.com.newspaper.network.ressponse
 
 
-import androidx.room.Entity
-import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
-import shubhamji.com.newspaper.network.ressponse.Source
 
-@Entity(tableName = "NewsList")
 data class Article(
     @SerializedName("author")
     val author: String,
@@ -25,7 +21,3 @@ data class Article(
     @SerializedName("urlToImage")
     val urlToImage: String
 )
-{
-    @PrimaryKey(autoGenerate = true)
-    val id:Int=0
-}
