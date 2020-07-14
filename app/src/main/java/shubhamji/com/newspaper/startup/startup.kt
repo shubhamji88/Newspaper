@@ -11,6 +11,8 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.fragment.findNavController
+import com.google.android.material.snackbar.Snackbar
 import shubhamji.com.newspaper.R
 import shubhamji.com.newspaper.database.NewsDatabase
 import shubhamji.com.newspaper.databinding.StartupBinding
@@ -35,6 +37,13 @@ class startup: Fragment() {
             val title = binding.title.text.toString()
             val body = binding.details.text.toString()
             viewModel.addnews(title, body)
+            findNavController().navigate(R.id.action_startup_to_loginPage)
+            Snackbar.make(
+                activity!!.findViewById(android.R.id.content),
+                "Your News was added Successfully!!",
+                Snackbar.LENGTH_SHORT // How long to display the message.
+            ).show()
+
         }
         viewModel.newNews.observe(viewLifecycleOwner, Observer {
             Timber.i("the heading is ${it?.headline} and body is ${it?.body}")

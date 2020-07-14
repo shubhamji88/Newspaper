@@ -18,7 +18,11 @@
             app:popExitAnim="@android:anim/slide_out_right" />
         <action
             android:id="@+id/action_loginPage_to_investor2"
-            app:destination="@id/investor" />
+            app:destination="@id/investor"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/investor"
@@ -35,9 +39,12 @@
         android:label="startup"
         tools:layout="@layout/startup">
         <action
-            android:id="@+id/action_startup_to_investor2"
-            app:destination="@id/investor"
-            app:popUpTo="@id/loginPage" />
+            android:id="@+id/action_startup_to_loginPage"
+            app:destination="@id/loginPage"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/fragment_about"

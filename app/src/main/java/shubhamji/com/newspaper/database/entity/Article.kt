@@ -1,23 +1,43 @@
-package shubhamji.com.newspaper.network.ressponse
+package shubhamji.com.newspaper.database.entity
 
-
-import com.google.gson.annotations.SerializedName
-
+import androidx.room.ColumnInfo
+import androidx.room.Embedded
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+import shubhamji.com.newspaper.domain.NewsArticle
+import shubhamji.com.newspaper.network.ressponse.Source
+@Entity
 data class Article(
-    @SerializedName("author")
+    @PrimaryKey(autoGenerate = true)
+    val id:Long=0L,
+
     val author: String,
-    @SerializedName("content")
+
     val content: String,
-    @SerializedName("description")
+
     val description: String,
-    @SerializedName("publishedAt")
+
     val publishedAt: String,
-    @SerializedName("source")
+    @Embedded(prefix = "source_")
     val source: Source,
-    @SerializedName("title")
+
     val title: String,
-    @SerializedName("url")
+
     val url: String,
-    @SerializedName("urlToImage")
+
     val urlToImage: String
 )
+fun List<Article>.toNewsArticle():List<NewsArticle>{
+    return map{
+        NewsArticle(
+            author = it.author,
+            content = it.content,
+            description = it.description,
+            publishedAt = it.publishedAt,
+            source = it.source,
+            title = it.title,
+            url=it.url,
+            urlToImage = it.urlToImage
+        )
+    }
+}
