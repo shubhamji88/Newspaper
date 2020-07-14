@@ -6,11 +6,11 @@ import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
 import shubhamji.com.newspaper.database.entity.Article
-import shubhamji.com.newspaper.database.entity.News
+
 @Dao
 interface articleDao {
     @Insert
-    fun insert(News: Article)
+    fun insert(News: List<Article>)
     @Update
     fun update(News: Article)
     @Query("select * from article order by id")

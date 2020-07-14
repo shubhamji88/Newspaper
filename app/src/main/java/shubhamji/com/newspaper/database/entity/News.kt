@@ -9,6 +9,6 @@ data class News(
     @PrimaryKey(autoGenerate = true)
     var newsid: Long=0L,
     @ColumnInfo(name="Headline")
-    var headline : String="Nothing",
+    var title : String="Nothing",
     @ColumnInfo(name = "body")
-    var body: String="Body")
+    var description: String="Body")

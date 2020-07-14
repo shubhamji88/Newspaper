@@ -3,7 +3,7 @@ package shubhamji.com.newspaper.network.ressponse
 
 import com.google.gson.annotations.SerializedName
 
-data class Article(
+data class ArticleResponse(
     @SerializedName("author")
     val author: String,
     @SerializedName("content")

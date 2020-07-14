@@ -7,11 +7,11 @@ import shubhamji.com.newspaper.database.entity.News
 @BindingAdapter("headline")
 fun TextView.head(item: News)
 {
-    text=item.headline
+    text=item.title
 }
 
 @BindingAdapter("body")
 fun TextView.body(item: News)
 {
-    text=item.body
+    text=item.description
 }

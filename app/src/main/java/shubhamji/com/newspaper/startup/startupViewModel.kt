@@ -28,7 +28,7 @@ class startupViewModel(
     {
         return withContext(Dispatchers.IO){
             var News=database.getLatestnews()
-            if(News?.headline=="Nothing")
+            if(News?.title=="Nothing")
                 News=null
             News
         }
@@ -42,8 +42,8 @@ class startupViewModel(
     {
         uiScope.launch {
             val News= News()
-            News.headline=title
-            News.body=body
+            News.title=title
+            News.description=body
             insert(News)
             newNews.value=News
         }
