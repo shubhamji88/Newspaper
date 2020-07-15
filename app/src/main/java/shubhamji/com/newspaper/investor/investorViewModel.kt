@@ -5,7 +5,7 @@ import androidx.lifecycle.*
 import kotlinx.coroutines.*
 import shubhamji.com.newspaper.database.NewsDatabase
 import shubhamji.com.newspaper.database.dao.databaseDAO
-import shubhamji.com.newspaper.network.MoshiResponse.NewsList
+import shubhamji.com.newspaper.network.Response.NewsList
 
 import shubhamji.com.newspaper.repository.NewsRepository
 import timber.log.Timber
@@ -39,9 +39,7 @@ class investorViewModel(
 
             } catch (e :Exception){
                 _news.value=ArrayList()
-                Timber.i("Sending\nthe\ninternet\nconnection")
                 Timber.i("Bending\nthe\ninternet\nconnection {${e}}")
-                Timber.i("Lending\nthe\ninternet\nconnection")
             }
         }
     }

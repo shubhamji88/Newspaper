@@ -1,4 +1,4 @@
-package shubhamji.com.newspaper.network.MoshiResponse
+package shubhamji.com.newspaper.network.Response
 
 
 import com.google.gson.annotations.SerializedName

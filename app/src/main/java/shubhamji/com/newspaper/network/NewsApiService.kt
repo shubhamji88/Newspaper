@@ -8,9 +8,8 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
-import shubhamji.com.newspaper.network.MoshiResponse.NewsList
+import shubhamji.com.newspaper.network.Response.NewsList
 
 
 private val BASE_URL="https://newsapi.org/"
