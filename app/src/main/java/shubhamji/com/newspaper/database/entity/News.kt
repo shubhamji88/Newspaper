@@ -3,7 +3,7 @@ package shubhamji.com.newspaper.database.entity
 import androidx.room.Embedded
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import shubhamji.com.newspaper.network.ressponse.Source
+
 
 @Entity(tableName = "News")
 data class News(
