@@ -1,9 +1,9 @@
-package shubhamji.com.newspaper.network.ressponse
+package shubhamji.com.newspaper.network.MoshiResponse
 
 
 import com.google.gson.annotations.SerializedName
 
-data class ArticleResponse(
+data class Article(
     @SerializedName("author")
     val author: String,
     @SerializedName("content")
@@ -12,8 +12,8 @@ data class ArticleResponse(
     val description: String,
     @SerializedName("publishedAt")
     val publishedAt: String,
-//    @SerializedName("source")
-//    val source: List<Source>,
+    @SerializedName("source")
+    val source: Source,
     @SerializedName("title")
     val title: String,
     @SerializedName("url")
