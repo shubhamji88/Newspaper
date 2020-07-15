@@ -12,8 +12,8 @@ data class ArticleResponse(
     val description: String,
     @SerializedName("publishedAt")
     val publishedAt: String,
-    @SerializedName("source")
-    val source: Source,
+//    @SerializedName("source")
+//    val source: List<Source>,
     @SerializedName("title")
     val title: String,
     @SerializedName("url")

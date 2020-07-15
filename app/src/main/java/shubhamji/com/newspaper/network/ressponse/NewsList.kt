@@ -2,7 +2,7 @@ package shubhamji.com.newspaper.network.ressponse
 
 
 import com.google.gson.annotations.SerializedName
-import shubhamji.com.newspaper.database.entity.Article
+import shubhamji.com.newspaper.database.entity.News
 
 data class NewsList(
     @SerializedName("articles")
@@ -12,18 +12,18 @@ data class NewsList(
     @SerializedName("totalResults")
     val totalResults: Int
 )
-fun List<NewsList>.toArticleDatabase():List<Article>{
+fun List<NewsList>.toArticleDatabase():List<News>{
     return map {
-        Article(
+        News(
             author = it.articles[0].author,
             content = it.articles[0].content,
             description = it.articles[0].description,
             publishedAt = it.articles[0].publishedAt,
-            source = it.articles[0].source,
+//            source = it.articles[0].source,
             title = it.articles[0].title,
             urlToImage = it.articles[0].urlToImage,
             url = it.articles[0].url
-        
+
         )
     }
 }

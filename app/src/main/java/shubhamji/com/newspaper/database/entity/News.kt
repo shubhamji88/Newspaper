@@ -1,14 +1,28 @@
 package shubhamji.com.newspaper.database.entity
 
-import androidx.room.ColumnInfo
+import androidx.room.Embedded
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import shubhamji.com.newspaper.network.ressponse.Source
 
 @Entity(tableName = "News")
 data class News(
     @PrimaryKey(autoGenerate = true)
     var newsid: Long=0L,
-    @ColumnInfo(name="Headline")
+
     var title : String="Nothing",
-    @ColumnInfo(name = "body")
-    var description: String="Body")
+
+    var description: String="Body",
+
+    val author: String="author",
+
+    val content: String="con",
+
+    val publishedAt: String="publishedAt",
+//    @Embedded(prefix = "source_")
+//    val source: Source?=null,
+
+    val url: String="url",
+
+    val urlToImage: String="urltoimage"
+)

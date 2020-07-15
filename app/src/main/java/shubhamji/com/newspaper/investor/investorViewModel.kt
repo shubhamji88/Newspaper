@@ -8,6 +8,8 @@ import shubhamji.com.newspaper.database.dao.databaseDAO
 import shubhamji.com.newspaper.network.NewsApi
 import shubhamji.com.newspaper.network.ressponse.NewsList
 import shubhamji.com.newspaper.repository.NewsRepository
+import timber.log.Timber
+//import shubhamji.com.newspaper.repository.NewsRepository
 import java.lang.Exception
 
 class investorViewModel(
@@ -17,7 +19,7 @@ class investorViewModel(
     private var viewModelJob = Job()
     private val coroutineScope = CoroutineScope(viewModelJob + Dispatchers.Main )
     private val database=NewsDatabase.getInstance(application)
-    private val newsRepository=NewsRepository(database)
+    private val newsRepository= NewsRepository(database)
 
     init{
         getNewsFromInternet()
@@ -33,9 +35,13 @@ class investorViewModel(
             try{
 //                val listResult=getPropertiesDeferred.await()
 //                _news.value=listResult
-                newsRepository.refreshNews()
+                    newsRepository.refreshNews()
+
             } catch (e :Exception){
                 _news.value=ArrayList()
+                Timber.i("Sending\nthe\ninternet\nconnection")
+                Timber.i("Bending\nthe\ninternet\nconnection {${e.toString()}}")
+                Timber.i("Lending\nthe\ninternet\nconnection")
             }
         }
     }
