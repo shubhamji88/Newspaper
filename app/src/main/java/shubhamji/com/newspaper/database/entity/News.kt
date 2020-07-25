@@ -10,19 +10,19 @@ data class News(
     @PrimaryKey(autoGenerate = true)
     var newsid: Long=0L,
 
-    var title : String="Nothing",
+    var title : String?="Nothing",
 
-    var description: String="Body",
+    var description: String?="Body",
 
-    val author: String="author",
+    val author: String?="author",
 
-    val content: String="con",
+    val content: String?="con",
 
-    val publishedAt: String="publishedAt",
+    val publishedAt: String?="publishedAt",
 //    @Embedded(prefix = "source_")
 //    val source: Source?=null,
 
-    val url: String="url",
+    val url: String?="url",
 
-    val urlToImage: String="urltoimage"
+    val urlToImage: String?="urltoimage"
 )

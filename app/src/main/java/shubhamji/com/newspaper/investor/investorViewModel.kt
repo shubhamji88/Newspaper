@@ -5,6 +5,7 @@ import androidx.lifecycle.*
 import kotlinx.coroutines.*
 import shubhamji.com.newspaper.database.NewsDatabase
 import shubhamji.com.newspaper.database.dao.databaseDAO
+import shubhamji.com.newspaper.network.NewsApi
 import shubhamji.com.newspaper.network.Response.NewsList
 
 import shubhamji.com.newspaper.repository.NewsRepository
@@ -31,15 +32,16 @@ class investorViewModel(
                 get() = _news
     fun getNewsFromInternet(){
         coroutineScope.launch {
-//            val getPropertiesDeferred=NewsApi.retrifitService.getNews()
+//            val getPropertiesDeferred= NewsApi.retrifitService.getNews()
             try{
 //                val listResult=getPropertiesDeferred.await()
 //                _news.value=listResult
                     newsRepository.refreshNews()
+                Timber.i("Bending\nthe\ninternet\nconnection solveddddddddddddddddddddddddddd")
 
             } catch (e :Exception){
                 _news.value=ArrayList()
-                Timber.i("Bending\nthe\ninternet\nconnection {${e}}")
+                Timber.i("Bending\nthe\ninternet\nconnection ${e}")
             }
         }
     }

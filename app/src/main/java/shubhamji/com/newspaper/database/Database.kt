@@ -9,7 +9,7 @@ import shubhamji.com.newspaper.database.dao.databaseDAO
 //import shubhamji.com.newspaper.database.entity.Article
 import shubhamji.com.newspaper.database.entity.News
 
-@Database(entities = [News::class],version = 3,exportSchema = false)
+@Database(entities = [News::class],version = 5,exportSchema = false)
 abstract class NewsDatabase : RoomDatabase()
 {
     abstract val newsdatabaseDAO: databaseDAO

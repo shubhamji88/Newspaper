@@ -29,7 +29,7 @@ private val retrofit=Retrofit.Builder()
     .build()
 interface NewsApiService{
     @GET("v2/top-headlines?country=us&apiKey=a0fb30d2985a45a9a69cd5fc6d03e264")
-    fun getNews(): Deferred<List<NewsList>>
+    fun getNews(): Deferred<NewsList>
 }
 object NewsApi{
     val retrifitService: NewsApiService by lazy {
