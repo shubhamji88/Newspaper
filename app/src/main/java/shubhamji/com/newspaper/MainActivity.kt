@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         //this is to display the backbutton and hamburger icon
         NavigationUI.setupActionBarWithNavController(this,navController,drawerLayout)
         //for navigation drawer
+
         NavigationUI.setupWithNavController(binding.drawer,navController)
     }
     override fun onSupportNavigateUp(): Boolean {

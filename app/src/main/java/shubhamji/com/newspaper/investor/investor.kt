@@ -32,7 +32,6 @@ class investor:Fragment(){
         binding.newslist.adapter=adapter
         viewModel.heading.observe(viewLifecycleOwner, Observer {
             it.let{
-//                adapter.addHeaderAndSubmitList(it)
                 adapter.submitList(it.map { DataItem.newsItem(it) })
             }
         })
@@ -64,10 +63,12 @@ class investor:Fragment(){
         when(item.itemId)
         {
             R.id.share -> shareit()
+//            R.id.shareit->shareit()
         }
-
+        if(item.itemId.toString()=="share")
+        {
+            shareit()
+        }
         return super.onOptionsItemSelected(item)
     }
-
-
 }
