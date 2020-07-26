@@ -11,6 +11,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/startupNav"
+        android:layout_width="154dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="36dp"
+        app:cardBackgroundColor="@color/colorAccent"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.51">
+        <TextView
+            android:id="@+id/startup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:text="STARTUP"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+
+    </androidx.cardview.widget.CardView>
+
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="369dp"
@@ -19,7 +45,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.143"
+        app:layout_constraintVertical_bias="0.149"
         app:srcCompat="@drawable/ic_launcher_foreground" />
 
     <TextView
@@ -37,28 +63,60 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
-    <Button
-        android:id="@+id/investorbutton"
-        android:layout_width="114dp"
-        android:layout_height="58dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginBottom="16dp"
-        android:text="Investor"
-        android:textColor="@android:color/holo_orange_dark"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+<!--    <Button-->
+<!--        android:id="@+id/investorbutton"-->
+<!--        android:layout_width="114dp"-->
+<!--        android:layout_height="58dp"-->
+<!--        android:layout_marginStart="56dp"-->
+<!--        android:layout_marginBottom="16dp"-->
+<!--        android:text="Investor"-->
+<!--        android:textColor="@android:color/holo_orange_dark"-->
+<!--        android:textSize="18sp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textView" />-->
 
-    <Button
-        android:id="@+id/startupbutton"
-        android:layout_width="114dp"
-        android:layout_height="57dp"
-        android:layout_marginEnd="68dp"
-        android:text="start-up"
-        android:textColor="@android:color/holo_green_dark"
-        android:textSize="18sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/investorbutton"
-        app:layout_constraintEnd_toEndOf="parent" />
+        <!--            <TextView-->
+        <!--                android:id="@+id/investorNav"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_centerInParent="true"-->
+        <!--                android:text="Login"-->
+        <!--                android:textColor="#fff"-->
+        <!--                android:textSize="18sp" />-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/investorNav"
+        android:layout_width="135dp"
+        android:layout_height="66dp"
+        android:layout_alignParentStart="true"
+        app:cardBackgroundColor="@color/colorAccent"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/startupNav"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.482">
+
+        <TextView
+            android:id="@+id/investorText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:text="INVESTOR"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+    </androidx.cardview.widget.CardView>
+
+    <!--    <Button-->
+<!--        android:id="@+id/startupbutton"-->
+<!--        android:layout_width="114dp"-->
+<!--        android:layout_height="57dp"-->
+<!--        android:layout_marginEnd="68dp"-->
+<!--        android:text="start-up"-->
+<!--        android:textColor="@android:color/holo_green_dark"-->
+<!--        android:textSize="18sp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent" />-->
 </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

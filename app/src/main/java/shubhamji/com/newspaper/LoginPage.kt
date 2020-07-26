@@ -20,7 +20,7 @@ class LoginPage: Fragment() {
     ): View? {
     val binding= DataBindingUtil.inflate<LoginpageBinding>(inflater,
         R.layout.loginpage,container,false)
-        binding.investorbutton.setOnClickListener{view : View->
+        binding.investorNav.setOnClickListener{view : View->
             view.findNavController().navigate(
                 LoginPageDirections.actionLoginPageToInvestor2(
                     "Nothing new"
@@ -28,7 +28,7 @@ class LoginPage: Fragment() {
             )
 
         }
-        binding.startupbutton.setOnClickListener{view :View->
+        binding.startupNav.setOnClickListener{view :View->
             view.findNavController().navigate(R.id.action_loginPage_to_startup)
         }
         setHasOptionsMenu(true)

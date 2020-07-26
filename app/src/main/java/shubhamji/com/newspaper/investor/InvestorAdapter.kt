@@ -80,13 +80,13 @@ class InvestorAdapter(val clickListnerimg: ClickListnerImage): ListAdapter<DataI
         }
     }
 
-    fun addHeaderAndSubmitList(list: List<News>?) {
-        val item=when(list){
-            null->listOf(DataItem.Header)
-            else-> listOf(DataItem.Header)+list.map { DataItem.newsItem(it) }
-        }
-        submitList(item)
-    }
+//    fun addHeaderAndSubmitList(list: List<News>?) {
+////        val item=when(list){
+////            null->listOf(DataItem.Header)
+////            else-> listOf(DataItem.Header)+list.map { DataItem.newsItem(it) }
+////        }
+////        submitList(item)
+////    }
 }
 class ClickListnerImage(val clisklistner: (Long)-> Unit){
     fun onClicknumber(news: News)= clisklistner(news.newsid)

@@ -6,7 +6,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    
 
 
     <TextView
@@ -15,9 +14,10 @@
         android:layout_height="60dp"
         android:layout_marginTop="30dp"
         android:layout_marginBottom="10dp"
+        android:fontFamily="sans-serif"
         android:text="Top News"
         android:textAlignment="center"
-        android:textColor="@android:color/holo_purple"
+        android:textColor="@android:color/black"
         android:textSize="36sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/newslist"

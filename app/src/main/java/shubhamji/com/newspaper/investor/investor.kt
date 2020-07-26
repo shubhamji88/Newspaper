@@ -32,7 +32,8 @@ class investor:Fragment(){
         binding.newslist.adapter=adapter
         viewModel.heading.observe(viewLifecycleOwner, Observer {
             it.let{
-                adapter.addHeaderAndSubmitList(it)
+//                adapter.addHeaderAndSubmitList(it)
+                adapter.submitList(it.map { DataItem.newsItem(it) })
             }
         })
         setHasOptionsMenu(true)
