@@ -17,8 +17,8 @@
 
             <TextView
                 android:id="@+id/textView6"
-                android:layout_width="261dp"
-                android:layout_height="80dp"
+                android:layout_width="331dp"
+                android:layout_height="72dp"
                 android:layout_marginTop="52dp"
                 android:text="Add Your News"
                 android:textAlignment="center"
@@ -107,8 +107,8 @@
 
             <ImageView
                 android:id="@+id/imageView3"
-                android:layout_width="455dp"
-                android:layout_height="733dp"
+                android:layout_width="520dp"
+                android:layout_height="745dp"
 
 
                 android:layout_marginTop="136dp"
