@@ -46,7 +46,7 @@ class investor:Fragment(){
             .putExtra(Intent.EXTRA_TEXT,"Hey there, Check this amazing Start-up News App and also invest in them")
         return shareIntent
     }
-    private fun shareit()
+    fun shareit()
     {
         startActivity(shareIntent())
     }
@@ -63,7 +63,6 @@ class investor:Fragment(){
         when(item.itemId)
         {
             R.id.share -> shareit()
-//            R.id.shareit->shareit()
         }
         if(item.itemId.toString()=="share")
         {

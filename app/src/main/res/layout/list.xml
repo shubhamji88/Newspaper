@@ -12,8 +12,6 @@
         <variable
             name="imageClick"
             type="shubhamji.com.newspaper.investor.ClickListnerImage" />
-
-
     </data>
 
     <androidx.cardview.widget.CardView

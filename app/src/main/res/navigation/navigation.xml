@@ -51,4 +51,8 @@
         android:name="shubhamji.com.newspaper.Fragment_about"
         android:label="fragment_about"
         tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/personal"
+        android:name="shubhamji.com.newspaper.personal.personal"
+        android:label="personal" />
 </navigation>

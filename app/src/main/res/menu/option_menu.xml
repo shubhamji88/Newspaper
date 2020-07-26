@@ -2,10 +2,7 @@
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item
-        android:id="@+id/fragment_about"
-        android:icon="@android:drawable/ic_menu_help"
-        android:title="@string/about" />
+
     <item
         android:id="@+id/shareit"
         android:checkable="false"
@@ -14,6 +11,10 @@
         android:title="Share"
         android:visible="true" />
     <item
+        android:id="@+id/updateNews"
+        android:title="Update News"
+        android:icon="@drawable/update"/>
+    <item
         android:id="@+id/investor"
         android:title="Investor"
         android:icon="@drawable/man"/>
@@ -21,4 +22,17 @@
         android:id="@+id/startup"
         android:title="Startup"
         android:icon="@drawable/startup"/>
+    <item android:title="About">
+        <menu>
+    <item
+        android:id="@+id/fragment_about"
+        android:icon="@android:drawable/ic_menu_help"
+        android:title="About App" />
+    <item
+        android:id="@+id/personal"
+        android:title="About Developer"
+        android:icon="@drawable/shubhamicon"/>
+        </menu>
+    </item>
+
 </menu>

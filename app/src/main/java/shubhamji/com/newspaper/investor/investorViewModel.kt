@@ -32,10 +32,8 @@ class investorViewModel(
                 get() = _news
     fun getNewsFromInternet(){
         coroutineScope.launch {
-//            val getPropertiesDeferred= NewsApi.retrifitService.getNews()
             try{
-//                val listResult=getPropertiesDeferred.await()
-//                _news.value=listResult
+
                     newsRepository.refreshNews()
                 Timber.i("Bending\nthe\ninternet\nconnection solveddddddddddddddddddddddddddd")
 
