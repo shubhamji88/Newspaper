@@ -12,4 +12,10 @@
         android:icon="@drawable/share"
         android:title="Share"
         android:visible="true" />
+    <item
+        android:id="@+id/investor"
+        android:title="Investor"/>
+    <item
+        android:id="@+id/startup"
+        android:title="Startup"/>
 </menu>

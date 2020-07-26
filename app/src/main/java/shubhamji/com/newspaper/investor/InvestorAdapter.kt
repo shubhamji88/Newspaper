@@ -29,13 +29,13 @@ class InvestorAdapter(val clickListnerimg: ClickListnerImage): ListAdapter<DataI
 
     }
     class HeaderViewHolder(view: View):RecyclerView.ViewHolder(view){
-    companion object{
-        fun from(parent: ViewGroup):HeaderViewHolder{
-            val layoutInflater=LayoutInflater.from(parent.context)
-            val view=layoutInflater.inflate(R.layout.header,parent,false)
-            return HeaderViewHolder(view)
+        companion object{
+            fun from(parent: ViewGroup):HeaderViewHolder{
+                val layoutInflater=LayoutInflater.from(parent.context)
+                val view=layoutInflater.inflate(R.layout.header,parent,false)
+                return HeaderViewHolder(view)
+            }
         }
-    }
     }
 
     override fun getItemViewType(position: Int): Int {

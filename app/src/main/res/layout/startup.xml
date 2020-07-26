@@ -4,25 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="603dp"
-            android:layout_height="1200dp"
-
-
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/rocket2" />
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="8dp"
-            android:layout_marginBottom="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent">
 
@@ -49,9 +38,9 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="40dp"
                 android:layout_marginEnd="8dp"
-                android:textColorHint="@android:color/white"
                 android:hint="Title"
                 android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
                 android:textSize="30sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -63,33 +52,33 @@
                 android:id="@+id/details"
                 android:layout_width="392dp"
                 android:layout_height="315dp"
-                android:shadowColor="@android:color/white"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="12dp"
                 android:ems="10"
                 android:gravity="start|top"
-                android:textColorHint="@android:color/white"
                 android:hint="Enter Details "
                 android:inputType="textMultiLine"
                 android:scrollbarAlwaysDrawVerticalTrack="true"
                 android:scrollbarSize="8sp"
                 android:scrollbarStyle="outsideInset"
                 android:scrollbars="vertical"
+                android:shadowColor="@android:color/white"
                 android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/title" />
 
-<!--            <Button-->
-<!--                android:id="@+id/addnews"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="0dp"-->
-<!--                android:layout_marginBottom="36dp"-->
-<!--                android:text="Add News"-->
-<!--                android:textColor="@android:color/holo_green_dark"-->
-<!--                app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintHorizontal_bias="0.498"-->
-<!--                app:layout_constraintStart_toStartOf="parent" />-->
+            <!--            <Button-->
+            <!--                android:id="@+id/addnews"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="0dp"-->
+            <!--                android:layout_marginBottom="36dp"-->
+            <!--                android:text="Add News"-->
+            <!--                android:textColor="@android:color/holo_green_dark"-->
+            <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                app:layout_constraintHorizontal_bias="0.498"-->
+            <!--                app:layout_constraintStart_toStartOf="parent" />-->
             <androidx.cardview.widget.CardView
                 android:id="@+id/addnews"
                 android:layout_width="139dp"
@@ -115,6 +104,18 @@
                     android:textSize="18sp"
                     android:textStyle="bold" />
             </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="455dp"
+                android:layout_height="733dp"
+
+
+                android:layout_marginTop="136dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6"
+                app:srcCompat="@drawable/back" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
