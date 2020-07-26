@@ -50,6 +50,22 @@ class MainActivity : AppCompatActivity() {
                     Toast.makeText(applicationContext,"Your News is Updated!!",Toast.LENGTH_SHORT).show()
                     return@setNavigationItemSelectedListener true
                 }
+                R.id.investor-> {
+                    navController.navigate(R.id.action_loginPage_to_investor2)
+                    return@setNavigationItemSelectedListener true
+                }
+                R.id.startup->{
+                    navController.navigate(R.id.action_loginPage_to_startup)
+                    return@setNavigationItemSelectedListener true
+                }
+                R.id.fragment_about->{
+                    navController.navigate(R.id.action_loginPage_to_fragment_about)
+                    return@setNavigationItemSelectedListener true
+                }
+                R.id.personal->{
+                    navController.navigate(R.id.action_loginPage_to_personal)
+                    return@setNavigationItemSelectedListener true
+                }
                 else->return@setNavigationItemSelectedListener true
 
             }

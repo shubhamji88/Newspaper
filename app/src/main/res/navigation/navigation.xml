@@ -23,6 +23,12 @@
             app:exitAnim="@android:anim/slide_out_right"
             app:popEnterAnim="@android:anim/slide_in_left"
             app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_loginPage_to_fragment_about"
+            app:destination="@id/fragment_about" />
+        <action
+            android:id="@+id/action_loginPage_to_personal"
+            app:destination="@id/personal" />
     </fragment>
     <fragment
         android:id="@+id/investor"
