@@ -14,17 +14,6 @@ data class NewsList(
     val totalResults: Int?
 )
 fun NewsList.toArticleDatabase():List<News>{
-//    return News(
-//            author = articles[0]?.author,
-//            content = articles[0]?.content,
-//            description = articles[0]?.description,
-//            publishedAt = articles[0]?.publishedAt,
-////            source = it.articles[0].source,
-//            title = articles[0]?.title,
-//            urlToImage = articles[0]?.urlToImage,
-//            url = articles[0]?.url
-//
-//        )
     return articles.map{
         News(
             author = it?.author,

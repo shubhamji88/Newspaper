@@ -10,6 +10,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import shubhamji.com.newspaper.R
 import shubhamji.com.newspaper.database.NewsDatabase
+import shubhamji.com.newspaper.database.stack.Stack.Companion.stack
 import shubhamji.com.newspaper.databinding.InvestorBinding
 
 
@@ -32,7 +33,8 @@ class investor:Fragment(){
         binding.newslist.adapter=adapter
         viewModel.heading.observe(viewLifecycleOwner, Observer {
             it.let{
-                adapter.submitList(it.map { DataItem.newsItem(it) })
+//                adapter.submitList(it)
+                adapter.submitList(stack)
             }
         })
         setHasOptionsMenu(true)

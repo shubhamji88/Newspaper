@@ -6,6 +6,7 @@ import androidx.lifecycle.MutableLiveData
 import kotlinx.coroutines.*
 import shubhamji.com.newspaper.database.dao.databaseDAO
 import shubhamji.com.newspaper.database.entity.News
+import shubhamji.com.newspaper.database.stack.Stack.Companion.stack
 
 class startupViewModel(
     val database: databaseDAO,
@@ -46,6 +47,7 @@ class startupViewModel(
             News.description=body
             insert(News)
             newNews.value=News
+            stack.add(News)
         }
     }
     private suspend fun insert(News: News)

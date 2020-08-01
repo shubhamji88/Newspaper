@@ -23,7 +23,7 @@ class investorViewModel(
     private val newsRepository= NewsRepository(database)
 
     init{
-        getNewsFromInternet()
+//        getNewsFromInternet()
 
     }
     val heading=databaseDAO.getLatest()

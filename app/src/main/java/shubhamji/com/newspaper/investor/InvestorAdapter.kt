@@ -11,18 +11,18 @@ import androidx.recyclerview.widget.RecyclerView
 import shubhamji.com.newspaper.R
 import shubhamji.com.newspaper.database.entity.News
 import shubhamji.com.newspaper.databinding.ListBinding
-private val ITEM_VIEW_TYPE_HEADER = 0
+
 private val ITEM_VIEW_TYPE_ITEM = 1
-class InvestorAdapter(val clickListnerimg: ClickListnerImage): ListAdapter<DataItem, RecyclerView.ViewHolder>(NewsDiffCallBack()) {
+class InvestorAdapter(val clickListnerimg: ClickListnerImage): ListAdapter<News, RecyclerView.ViewHolder>(NewsDiffCallBack()) {
 
     @SuppressLint("DiffUtilEquals")
-    class NewsDiffCallBack : DiffUtil.ItemCallback<DataItem>()
+    class NewsDiffCallBack : DiffUtil.ItemCallback<News>()
     {
-        override fun areItemsTheSame(oldItem: DataItem, newItem: DataItem): Boolean {
-            return oldItem.id==newItem.id
+        override fun areItemsTheSame(oldItem: News, newItem: News): Boolean {
+            return oldItem.newsid==newItem.newsid
         }
 
-        override fun areContentsTheSame(oldItem: DataItem, newItem: DataItem): Boolean {
+        override fun areContentsTheSame(oldItem: News, newItem: News): Boolean {
             return oldItem==newItem
         }
 
@@ -39,10 +39,7 @@ class InvestorAdapter(val clickListnerimg: ClickListnerImage): ListAdapter<DataI
     }
 
     override fun getItemViewType(position: Int): Int {
-        return when(getItem(position)){
-            is DataItem.Header-> ITEM_VIEW_TYPE_HEADER
-            is DataItem.newsItem->ITEM_VIEW_TYPE_ITEM
-        }
+        return ITEM_VIEW_TYPE_ITEM
     }
     class ViewHolder private constructor(val binding: ListBinding): RecyclerView.ViewHolder(binding.root){
         companion object {
@@ -63,41 +60,28 @@ class InvestorAdapter(val clickListnerimg: ClickListnerImage): ListAdapter<DataI
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         when(holder){
             is ViewHolder->{
-                val item=getItem(position) as DataItem.newsItem
-                holder.bind(item.news,clickListnerimg)
+                val item=getItem(position) as News
+                holder.bind(item,clickListnerimg)
             }
         }
 
     }
 
-
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        return when(viewType){
-            ITEM_VIEW_TYPE_ITEM-> ViewHolder.from(parent)
-            ITEM_VIEW_TYPE_HEADER->HeaderViewHolder.from(parent)
-            else -> throw ClassCastException("Unknown viewType ${viewType}")
-        }
+        return ViewHolder.from(parent)
     }
 
-//    fun addHeaderAndSubmitList(list: List<News>?) {
-////        val item=when(list){
-////            null->listOf(DataItem.Header)
-////            else-> listOf(DataItem.Header)+list.map { DataItem.newsItem(it) }
-////        }
-////        submitList(item)
-////    }
 }
 class ClickListnerImage(val clisklistner: (Long)-> Unit){
     fun onClicknumber(news: News)= clisklistner(news.newsid)
 }
-sealed class DataItem{
-    abstract val id: Long
-    object Header: DataItem()
-    {
-        override val id=Long.MIN_VALUE
-    }
-    data class newsItem(val news: News):DataItem(){
-        override val id =news.newsid
-    }
-}
+//sealed class DataItem{
+//    abstract val id: Long
+//    object Header: DataItem()
+//    {
+//        override val id=Long.MIN_VALUE
+//    }
+//    data class newsItem (val news: News):News(){
+//        override val id =news.newsid
+//    }
+//}
