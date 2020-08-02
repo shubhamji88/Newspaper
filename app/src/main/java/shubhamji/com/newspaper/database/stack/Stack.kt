@@ -6,7 +6,7 @@ import timber.log.Timber
 import java.util.*
 import kotlin.collections.ArrayList
 
-class Stack<News>{
+class Stack{
     companion object{
         var stack:ArrayList<News> =ArrayList()
          fun push(element: News) {
