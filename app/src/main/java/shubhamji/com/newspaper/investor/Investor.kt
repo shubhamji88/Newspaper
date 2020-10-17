@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.findNavController
+import shubhamji.com.newspaper.MainActivity
 import shubhamji.com.newspaper.R
 import shubhamji.com.newspaper.database.NewsDatabase
 import shubhamji.com.newspaper.database.stack.Stack.Companion.stack
@@ -23,6 +24,7 @@ class Investor:Fragment(){
         val binding : InvestorBinding=
             DataBindingUtil.inflate(inflater,
                 R.layout.investor, container, false)
+        (requireActivity() as MainActivity).supportActionBar!!.show()
         val application= requireNotNull(this.activity).application
         val dataSource=NewsDatabase.getInstance(application).newsdatabaseDAO
         viewModelFactory=

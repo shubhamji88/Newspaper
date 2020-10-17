@@ -40,7 +40,11 @@
             app:argType="string" />
         <action
             android:id="@+id/action_investor_to_webview2"
-            app:destination="@id/webview2" />
+            app:destination="@id/webview2"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/investor"
+            app:popUpToInclusive="false" />
     </fragment>
     <fragment
         android:id="@+id/startup"
@@ -71,5 +75,14 @@
         <argument
             android:name="urlString"
             app:argType="string" />
+        <action
+            android:id="@+id/action_webview2_to_investor"
+            app:destination="@id/investor"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/investor"
+            app:popUpToInclusive="true" />
     </fragment>
 </navigation>
