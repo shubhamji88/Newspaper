@@ -32,12 +32,15 @@
     </fragment>
     <fragment
         android:id="@+id/investor"
-        android:name="shubhamji.com.newspaper.investor.investor"
+        android:name="shubhamji.com.newspaper.investor.Investor"
         android:label="investor"
         tools:layout="@layout/investor">
         <argument
             android:name="NewsHeadLine"
             app:argType="string" />
+        <action
+            android:id="@+id/action_investor_to_webview2"
+            app:destination="@id/webview2" />
     </fragment>
     <fragment
         android:id="@+id/startup"
@@ -61,4 +64,12 @@
         android:id="@+id/personal"
         android:name="shubhamji.com.newspaper.personal.personal"
         android:label="personal" />
+    <fragment
+        android:id="@+id/webview2"
+        android:name="shubhamji.com.newspaper.webView.Webview"
+        android:label="Webview" >
+        <argument
+            android:name="urlString"
+            app:argType="string" />
+    </fragment>
 </navigation>
