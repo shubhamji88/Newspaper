@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val binding= DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
         drawerLayout=binding.drawerLayout
+
         val database=NewsDatabase.getInstance(application)
         val newsRepository=NewsRepository(database)
         val navController=Navigation.findNavController(this, R.id.myNavHostFragment)

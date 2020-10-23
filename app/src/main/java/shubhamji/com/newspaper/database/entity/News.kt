@@ -14,15 +14,15 @@ data class News(
 
     var description: String?="Body",
 
-    val author: String?="author",
+    var author: String?="author",
 
     val content: String?="con",
 
-    val publishedAt: String?="publishedAt",
+    var publishedAt: String?="publishedAt",
 //    @Embedded(prefix = "source_")
 //    val source: Source?=null,
 
-    val url: String?="url",
+    var url: String?="url",
 
     val urlToImage: String?="urltoimage"
 )

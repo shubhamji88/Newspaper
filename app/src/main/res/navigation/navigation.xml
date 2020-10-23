@@ -25,10 +25,18 @@
             app:popExitAnim="@android:anim/slide_out_right" />
         <action
             android:id="@+id/action_loginPage_to_fragment_about"
-            app:destination="@id/fragment_about" />
+            app:destination="@id/fragment_about"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
         <action
             android:id="@+id/action_loginPage_to_personal"
-            app:destination="@id/personal" />
+            app:destination="@id/personal"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit" />
     </fragment>
     <fragment
         android:id="@+id/investor"

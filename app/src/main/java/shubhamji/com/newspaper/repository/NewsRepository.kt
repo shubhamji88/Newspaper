@@ -15,13 +15,11 @@ lateinit var news:NewsList
 class NewsRepository(private val database: NewsDatabase) {
     val stack=Stack
     suspend fun refreshNews(){
-        Timber.i("Starting\nthe\ninternet\nconnection")
         withContext(Dispatchers.IO){
-            Timber.i("Start\nthe\ninternet\nconnection")
             news=NewsApi.retrifitService.getNews().await()
 //            database.newsdatabaseDAO.insertArtcle(news.toArticleDatabase())
             stack.pushAll(news.toArticleDatabase())
-            stack.display()
+//            stack.display()
         }
 
     }

@@ -24,7 +24,8 @@ class Investor:Fragment(){
         val binding : InvestorBinding=
             DataBindingUtil.inflate(inflater,
                 R.layout.investor, container, false)
-        (requireActivity() as MainActivity).supportActionBar!!.show()
+        (requireActivity() as MainActivity).supportActionBar!!.hide()
+//        (requireActivity() as MainActivity).supportActionBar!!.setTitle("            INVESTOR")
         val application= requireNotNull(this.activity).application
         val dataSource=NewsDatabase.getInstance(application).newsdatabaseDAO
         viewModelFactory=
@@ -34,6 +35,7 @@ class Investor:Fragment(){
 //            Toast.makeText(context,"url is : ${url}",Toast.LENGTH_SHORT).show()
             view?.findNavController()?.navigate(InvestorDirections.actionInvestorToWebview2(url))
         })
+
         binding.newslist.adapter=adapter
         viewModel.heading.observe(viewLifecycleOwner, Observer {
             it.let{

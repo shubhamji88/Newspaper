@@ -12,6 +12,7 @@ class Fragment_about : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        (requireActivity() as MainActivity).supportActionBar!!.hide()
         return inflater.inflate(R.layout.fragment_about, container, false)
     }
 

@@ -32,6 +32,7 @@ class Webview : Fragment() {
             container,
             false
         )
+
         (requireActivity() as MainActivity).supportActionBar!!.hide()
         val button=binding.floatingActionButton
 
