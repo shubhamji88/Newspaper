@@ -18,34 +18,35 @@ class investorViewModel(
     application: Application
 ): AndroidViewModel(application) {
     private var viewModelJob = Job()
-    private val coroutineScope = CoroutineScope(viewModelJob + Dispatchers.Main )
-    private val database=NewsDatabase.getInstance(application)
-    private val newsRepository= NewsRepository(database)
+//    private val coroutineScope = CoroutineScope(viewModelJob + Dispatchers.Main )
+//    private val database=NewsDatabase.getInstance(application)
+//    private val newsRepository= NewsRepository(database)
 
     init{
-        getNewsFromInternet()
+//        getNewsFromInternet()
 
     }
     val heading=databaseDAO.getLatest()
-    private val _news=MutableLiveData<List<NewsList>>()
-    private val news:LiveData<List<NewsList>>?
-                get() = _news
-    fun getNewsFromInternet(){
-        coroutineScope.launch {
-            try{
-
-                    newsRepository.refreshNews()
-                Timber.i("Bending\nthe\ninternet\nconnection solveddddddddddddddddddddddddddd")
-
-            } catch (e :Exception){
-                _news.value=ArrayList()
-                Timber.i("Bending\nthe\ninternet\nconnection ${e}")
-            }
-        }
-    }
+//    private val _news=MutableLiveData<List<NewsList>>()
+//    private val news:LiveData<List<NewsList>>?
+//                get() = _news
+//    fun getNewsFromInternet(){
+//        coroutineScope.launch {
+//            try{
+//
+//                    newsRepository.refreshNews()
+//                Timber.i("Bending\nthe\ninternet\nconnection solveddddddddddddddddddddddddddd")
+//
+//            } catch (e :Exception){
+//                _news.value=ArrayList()
+//                Timber.i("Bending\nthe\ninternet\nconnection ${e}")
+//            }
+//        }
+//    }
     override fun onCleared() {
         super.onCleared()
         viewModelJob.cancel()
 
     }
+
 }

@@ -25,19 +25,32 @@
             app:popExitAnim="@android:anim/slide_out_right" />
         <action
             android:id="@+id/action_loginPage_to_fragment_about"
-            app:destination="@id/fragment_about" />
+            app:destination="@id/fragment_about"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
         <action
             android:id="@+id/action_loginPage_to_personal"
-            app:destination="@id/personal" />
+            app:destination="@id/personal"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit" />
     </fragment>
     <fragment
         android:id="@+id/investor"
-        android:name="shubhamji.com.newspaper.investor.investor"
+        android:name="shubhamji.com.newspaper.investor.Investor"
         android:label="investor"
         tools:layout="@layout/investor">
-        <argument
-            android:name="NewsHeadLine"
-            app:argType="string" />
+
+        <action
+            android:id="@+id/action_investor_to_webview2"
+            app:destination="@id/webview2"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/investor"
+            app:popUpToInclusive="false" />
     </fragment>
     <fragment
         android:id="@+id/startup"
@@ -61,4 +74,21 @@
         android:id="@+id/personal"
         android:name="shubhamji.com.newspaper.personal.personal"
         android:label="personal" />
+    <fragment
+        android:id="@+id/webview2"
+        android:name="shubhamji.com.newspaper.webView.Webview"
+        android:label="Webview" >
+        <argument
+            android:name="urlString"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_webview2_to_investor"
+            app:destination="@id/investor"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/investor"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>

@@ -7,12 +7,9 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
-import shubhamji.com.newspaper.LoginPageDirections
-
 import shubhamji.com.newspaper.databinding.LoginpageBinding
-import timber.log.Timber
-
 class LoginPage: Fragment() {
+    lateinit var tool: androidx.appcompat.app.ActionBar
     override fun onCreateView(
         inflater: LayoutInflater,
          container: ViewGroup?,
@@ -20,11 +17,13 @@ class LoginPage: Fragment() {
     ): View? {
     val binding= DataBindingUtil.inflate<LoginpageBinding>(inflater,
         R.layout.loginpage,container,false)
+        tool=(requireActivity() as MainActivity).supportActionBar!!
+        tool.show()
+        tool.setTitle("        SILICON PAPER")
+
         binding.investorNav.setOnClickListener{view : View->
             view.findNavController().navigate(
-                LoginPageDirections.actionLoginPageToInvestor2(
-                    "Nothing new"
-                )
+                LoginPageDirections.actionLoginPageToInvestor2()
             )
 
         }
@@ -32,6 +31,7 @@ class LoginPage: Fragment() {
             view.findNavController().navigate(R.id.action_loginPage_to_startup)
         }
         setHasOptionsMenu(true)
+
         return binding.root
     }
     private fun shareIntent(): Intent {
@@ -53,10 +53,14 @@ class LoginPage: Fragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId)
         {
-            R.id.share ->share()
+            R.id.shareit ->share()
         }
         return super.onOptionsItemSelected(item)
                 || NavigationUI.onNavDestinationSelected(item,view!!.findNavController())
     }
 
+    override fun onStart() {
+        tool.setTitle("        SILICON PAPER")
+        super.onStart()
+    }
 }

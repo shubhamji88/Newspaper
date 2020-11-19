@@ -8,31 +8,39 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.findNavController
+import shubhamji.com.newspaper.MainActivity
 import shubhamji.com.newspaper.R
 import shubhamji.com.newspaper.database.NewsDatabase
+import shubhamji.com.newspaper.database.stack.Stack.Companion.stack
 import shubhamji.com.newspaper.databinding.InvestorBinding
 
 
 @Suppress("DEPRECATION")
-class investor:Fragment(){
+class Investor:Fragment(){
     lateinit var viewModel: investorViewModel
     lateinit var viewModelFactory: investorViewModelFactory
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val binding : InvestorBinding=
             DataBindingUtil.inflate(inflater,
                 R.layout.investor, container, false)
+        (requireActivity() as MainActivity).supportActionBar!!.hide()
+//        (requireActivity() as MainActivity).supportActionBar!!.setTitle("            INVESTOR")
         val application= requireNotNull(this.activity).application
         val dataSource=NewsDatabase.getInstance(application).newsdatabaseDAO
         viewModelFactory=
             investorViewModelFactory(dataSource,application)
         viewModel= ViewModelProviders.of(this,viewModelFactory).get(investorViewModel::class.java)
-        val adapter=InvestorAdapter(ClickListnerImage{newsid: Long->
-            Toast.makeText(context,"The number is ${newsid}",Toast.LENGTH_SHORT).show()
+        val adapter=InvestorAdapter(ClickListner{ url: String->
+//            Toast.makeText(context,"url is : ${url}",Toast.LENGTH_SHORT).show()
+            view?.findNavController()?.navigate(InvestorDirections.actionInvestorToWebview2(url))
         })
+
         binding.newslist.adapter=adapter
         viewModel.heading.observe(viewLifecycleOwner, Observer {
             it.let{
-                adapter.submitList(it.map { DataItem.newsItem(it) })
+//                adapter.submitList(it)
+                adapter.submitList(stack)
             }
         })
         setHasOptionsMenu(true)
@@ -70,4 +78,8 @@ class investor:Fragment(){
         }
         return super.onOptionsItemSelected(item)
     }
+//    fun Click(url: String){
+//        Toast.makeText(context,url,Toast.LENGTH_SHORT).show()
+//        view?.findNavController()?.navigate(InvestorDirections.actionInvestorToWebview2(url))
+//    }
 }

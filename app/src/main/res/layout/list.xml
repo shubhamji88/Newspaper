@@ -10,8 +10,9 @@
             type="shubhamji.com.newspaper.database.entity.News" />
 
         <variable
-            name="imageClick"
-            type="shubhamji.com.newspaper.investor.ClickListnerImage" />
+            name="Click"
+            type="shubhamji.com.newspaper.investor.ClickListner" />
+
     </data>
 
     <androidx.cardview.widget.CardView
@@ -19,7 +20,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:background="#fff"
-
+        android:onClick="@{()->Click.onClickurl(newss.url)}"
         android:layout_margin="10dp">
 
         <LinearLayout
@@ -51,7 +52,7 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="16dp"
                     android:layout_weight="1"
-                    android:text="Fox News ."
+                    android:text="Fox News "
                     android:textColor="@color/listsub1"
                     android:textSize="11dp"
                     app:author="@{newss}" />

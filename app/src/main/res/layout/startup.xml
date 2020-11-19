@@ -7,44 +7,31 @@
         android:layout_height="match_parent"
         android:background="@color/colorPrimary">
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="501dp"
-            android:layout_height="638dp"
 
-
-            android:layout_marginTop="340dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.677"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/back" />
-
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent">
 
-            <TextView
-                android:id="@+id/textView6"
-                android:layout_width="331dp"
-                android:layout_height="72dp"
-                android:layout_marginTop="52dp"
-                android:text="Add Your News"
-                android:textAlignment="center"
-                android:textColor="@android:color/white"
-                android:textSize="36sp"
-                android:textStyle="bold|italic"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
+                            <TextView
+                                android:id="@+id/textView6"
+                                android:layout_width="331dp"
+                                android:layout_height="72dp"
+                                android:layout_marginTop="48dp"
+                                android:text="Add Your News"
+                                android:textAlignment="center"
+                                android:textColor="@android:color/white"
+                                android:textSize="46sp"
+                                android:textStyle="bold|italic"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.518"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
 
-            <EditText
+                            <EditText
                 android:id="@+id/title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -61,25 +48,25 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
-            <EditText
-                android:id="@+id/details"
-                android:layout_width="392dp"
-                android:layout_height="315dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="12dp"
-                android:ems="10"
-                android:gravity="start|top"
-                android:hint="Enter Details "
-                android:inputType="textMultiLine"
-                android:scrollbarAlwaysDrawVerticalTrack="true"
-                android:scrollbarSize="8sp"
-                android:scrollbarStyle="outsideInset"
-                android:scrollbars="vertical"
-                android:shadowColor="@android:color/white"
-                android:textColor="@android:color/white"
-                android:textColorHint="@android:color/white"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/title" />
+                            <EditText
+                                android:id="@+id/details"
+                                android:layout_width="389dp"
+                                android:layout_height="100dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="24dp"
+                                android:ems="10"
+                                android:gravity="start|top"
+                                android:hint="Enter Details "
+                                android:inputType="textMultiLine"
+                                android:scrollbarAlwaysDrawVerticalTrack="true"
+                                android:scrollbarSize="8sp"
+                                android:scrollbarStyle="outsideInset"
+                                android:scrollbars="vertical"
+                                android:shadowColor="@android:color/white"
+                                android:textColor="@android:color/white"
+                                android:textColorHint="@android:color/white"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/title" />
 
             <!--            <Button-->
             <!--                android:id="@+id/addnews"-->
@@ -92,32 +79,102 @@
             <!--                app:layout_constraintEnd_toEndOf="parent"-->
             <!--                app:layout_constraintHorizontal_bias="0.498"-->
             <!--                app:layout_constraintStart_toStartOf="parent" />-->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/addnews"
-                android:layout_width="139dp"
-                android:layout_height="51dp"
-                android:layout_alignParentStart="true"
-                app:cardBackgroundColor="@color/colorAccent"
-                app:cardCornerRadius="25dp"
-                app:cardElevation="10dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
+
+                            <EditText
+                                android:id="@+id/NameDetails"
+                                android:layout_width="392dp"
+                                android:layout_height="56dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="24dp"
+                                android:ems="10"
+                                android:gravity="start|top"
+                                android:hint="Your Name"
+                                android:inputType="textMultiLine"
+                                android:scrollbarAlwaysDrawVerticalTrack="true"
+                                android:scrollbarSize="8sp"
+                                android:scrollbarStyle="outsideInset"
+                                android:scrollbars="vertical"
+                                android:shadowColor="@android:color/white"
+                                android:textColor="@android:color/white"
+                                android:textColorHint="@android:color/white"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/Website" />
+
+                            <EditText
+                                android:id="@+id/Website"
+                                android:layout_width="392dp"
+                                android:layout_height="56dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="24dp"
+                                android:ems="10"
+                                android:gravity="start|top"
+                                android:hint="Website Link"
+                                android:inputType="textMultiLine"
+                                android:scrollbarAlwaysDrawVerticalTrack="true"
+                                android:scrollbarSize="8sp"
+                                android:scrollbarStyle="outsideInset"
+                                android:scrollbars="vertical"
+                                android:shadowColor="@android:color/white"
+                                android:textColor="@android:color/white"
+                                android:textColorHint="@android:color/white"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/details" />
+
+                            <EditText
+                                android:id="@+id/DateDetails"
+                                android:layout_width="392dp"
+                                android:layout_height="56dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="24dp"
+                                android:ems="10"
+                                android:gravity="start|top"
+                                android:hint="Date [YYYY-MM-DD]"
+                                android:inputType="textMultiLine"
+                                android:scrollbarAlwaysDrawVerticalTrack="true"
+                                android:scrollbarSize="8sp"
+                                android:scrollbarStyle="outsideInset"
+                                android:scrollbars="vertical"
+                                android:shadowColor="@android:color/white"
+                                android:textColor="@android:color/white"
+                                android:textColorHint="@android:color/white"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/NameDetails" />
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/addnews"
+                                android:layout_width="139dp"
+                                android:layout_height="51dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginBottom="32dp"
+                                app:cardBackgroundColor="@color/colorAccent"
+                                app:cardCornerRadius="25dp"
+                                app:cardElevation="10dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/NameDetails"
+                                app:layout_constraintVertical_bias="0.91">
+
+                                <TextView
+                                    android:id="@+id/addnewsText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:layout_gravity="center"
+                                    android:text="ADD NEWS"
+                                    android:textColor="#fff"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+
+                            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="509dp"
+                android:layout_height="296dp"
+                android:src="@drawable/backk"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/details"
-                app:layout_constraintVertical_bias="0.65">
-
-                <TextView
-                    android:id="@+id/addnewsText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:layout_gravity="center"
-                    android:text="ADD NEWS"
-                    android:textColor="#fff"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-            </androidx.cardview.widget.CardView>
-
+                app:layout_constraintTop_toBottomOf="@+id/DateDetails" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
