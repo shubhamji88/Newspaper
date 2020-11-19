@@ -29,8 +29,8 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/newslist"
-        android:layout_width="412dp"
-        android:layout_height="643dp"
+        android:layout_width="409dp"
+        android:layout_height="669dp"
         android:layout_marginTop="4dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"

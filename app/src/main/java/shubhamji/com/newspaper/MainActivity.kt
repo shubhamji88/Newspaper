@@ -28,7 +28,6 @@ class MainActivity : AppCompatActivity() {
         val database=NewsDatabase.getInstance(application)
         val newsRepository=NewsRepository(database)
         val navController=Navigation.findNavController(this, R.id.myNavHostFragment)
-        //this is to display the backbutton and hamburger icon
         NavigationUI.setupActionBarWithNavController(this,navController,drawerLayout)
         fun shareIntent(): Intent
         {
@@ -52,19 +51,19 @@ class MainActivity : AppCompatActivity() {
                     return@setNavigationItemSelectedListener true
                 }
                 R.id.investor-> {
-                    navController.navigate(R.id.action_loginPage_to_investor2)
+                    navController.navigate(LoginPageDirections.actionLoginPageToInvestor2())
                     return@setNavigationItemSelectedListener true
                 }
                 R.id.startup->{
-                    navController.navigate(R.id.action_loginPage_to_startup)
+                    navController.navigate(LoginPageDirections.actionLoginPageToStartup())
                     return@setNavigationItemSelectedListener true
                 }
                 R.id.fragment_about->{
-                    navController.navigate(R.id.action_loginPage_to_fragment_about)
+                    navController.navigate(LoginPageDirections.actionLoginPageToFragmentAbout())
                     return@setNavigationItemSelectedListener true
                 }
                 R.id.personal->{
-                    navController.navigate(R.id.action_loginPage_to_personal)
+                    navController.navigate(LoginPageDirections.actionLoginPageToPersonal())
                     return@setNavigationItemSelectedListener true
                 }
                 else->return@setNavigationItemSelectedListener true

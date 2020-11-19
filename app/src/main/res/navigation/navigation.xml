@@ -43,9 +43,7 @@
         android:name="shubhamji.com.newspaper.investor.Investor"
         android:label="investor"
         tools:layout="@layout/investor">
-        <argument
-            android:name="NewsHeadLine"
-            app:argType="string" />
+
         <action
             android:id="@+id/action_investor_to_webview2"
             app:destination="@id/webview2"
