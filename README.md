@@ -7,7 +7,7 @@ Link to APK: https://drive.google.com/file/d/1-3YMwNd9nIW5Kr8qGv-uFus0vOnG8aEQ/v
 ## Permissions
 * **Internet**: For reciving news from https://newsapi.org/.
 
-**Screenshots**
+## Screenshots
 ![1](https://user-images.githubusercontent.com/56815364/99646883-119e6480-2a77-11eb-912c-2af8c51c97ad.PNG)
 ![2](https://user-images.githubusercontent.com/56815364/99646906-182cdc00-2a77-11eb-9d9f-babfa75e6a77.PNG)
 ![3](https://user-images.githubusercontent.com/56815364/99646919-1a8f3600-2a77-11eb-81b8-6e9c2ec69aff.PNG)
