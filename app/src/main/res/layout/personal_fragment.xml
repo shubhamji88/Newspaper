@@ -8,12 +8,12 @@
         android:background="@color/colorPrimary">
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/Description"
             android:layout_width="356dp"
             android:layout_height="219dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="24dp"
-            android:text="Hey, i am android developer and learned this skill iin 3 months and it was an amazing journey. hope you like my work...\nThanks \n \n Contact: 8810422723"
+            android:text="@string/about_developer"
             android:textAlignment="viewStart"
             android:textColor="@android:color/white"
             android:textSize="24sp"
@@ -26,7 +26,7 @@
             android:layout_width="327dp"
             android:layout_height="77dp"
             android:layout_marginTop="44dp"
-            android:text="Shubham Shankaram"
+            android:text="@string/developer_name"
             android:textAlignment="center"
             android:textColor="@android:color/white"
             android:textSize="30sp"
@@ -53,7 +53,7 @@
             android:layout_marginStart="8dp"
             android:src="@drawable/backk"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+            app:layout_constraintTop_toBottomOf="@+id/Description" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

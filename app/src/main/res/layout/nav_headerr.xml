@@ -3,7 +3,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
 
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="200dp"
     android:background="@color/colorPrimaryDark">
@@ -36,7 +35,7 @@
         android:layout_height="23dp"
         android:layout_marginStart="20dp"
         android:layout_marginBottom="16dp"
-        android:text="Shubham Shankaram"
+        android:text="@string/developer_name"
         android:textColor="@android:color/white"
         android:textSize="18sp"
         android:textStyle="bold"

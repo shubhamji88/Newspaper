@@ -22,7 +22,7 @@
         android:layout_width="198dp"
         android:layout_height="66dp"
         android:layout_marginTop="24dp"
-        android:text="About"
+        android:text="@string/about"
         android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="60sp"

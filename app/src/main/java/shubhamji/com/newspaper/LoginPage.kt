@@ -12,16 +12,16 @@ class LoginPage: Fragment() {
     lateinit var tool: androidx.appcompat.app.ActionBar
     override fun onCreateView(
         inflater: LayoutInflater,
-         container: ViewGroup?,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-    val binding= DataBindingUtil.inflate<LoginpageBinding>(inflater,
-        R.layout.loginpage,container,false)
-        tool=(requireActivity() as MainActivity).supportActionBar!!
-        tool.show()
-        tool.setTitle("        SILICON PAPER")
+    ): View {
+        val binding = DataBindingUtil.inflate<LoginpageBinding>(
+            inflater,
+            R.layout.loginpage, container, false
+        )
+        tool = (requireActivity() as MainActivity).supportActionBar!!
 
-        binding.investorNav.setOnClickListener{view : View->
+        binding.investorNav.setOnClickListener { view: View ->
             view.findNavController().navigate(
                 LoginPageDirections.actionLoginPageToInvestor2()
             )
@@ -37,7 +37,7 @@ class LoginPage: Fragment() {
     private fun shareIntent(): Intent {
         val intent=Intent(Intent.ACTION_SEND)
         intent.setType("text/plain")
-            .putExtra(Intent.EXTRA_TEXT,"Check This NEW START UP NEWS APP")
+            .putExtra(Intent.EXTRA_TEXT, getString(R.string.shareMessage))
         return intent
 
     }
@@ -60,7 +60,9 @@ class LoginPage: Fragment() {
     }
 
     override fun onStart() {
+        tool.show()
         tool.setTitle("        SILICON PAPER")
         super.onStart()
     }
+
 }

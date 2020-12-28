@@ -25,5 +25,4 @@ fun TextView.publishedAt(item: News)
 {
     val t=item.publishedAt
     text=t?.subSequence(0,10)
-//    text=item.publishedAt
 }

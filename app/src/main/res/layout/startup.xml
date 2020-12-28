@@ -6,7 +6,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorPrimary">
-
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout"
@@ -68,18 +70,6 @@
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/title" />
 
-            <!--            <Button-->
-            <!--                android:id="@+id/addnews"-->
-            <!--                android:layout_width="wrap_content"-->
-            <!--                android:layout_height="0dp"-->
-            <!--                android:layout_marginBottom="36dp"-->
-            <!--                android:text="Add News"-->
-            <!--                android:textColor="@android:color/holo_green_dark"-->
-            <!--                app:layout_constraintBottom_toBottomOf="parent"-->
-            <!--                app:layout_constraintEnd_toEndOf="parent"-->
-            <!--                app:layout_constraintHorizontal_bias="0.498"-->
-            <!--                app:layout_constraintStart_toStartOf="parent" />-->
-
                             <EditText
                                 android:id="@+id/NameDetails"
                                 android:layout_width="392dp"
@@ -120,53 +110,56 @@
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/details" />
 
-                            <EditText
-                                android:id="@+id/DateDetails"
-                                android:layout_width="392dp"
-                                android:layout_height="56dp"
-                                android:layout_marginStart="8dp"
-                                android:layout_marginTop="24dp"
-                                android:ems="10"
-                                android:gravity="start|top"
-                                android:hint="Date [YYYY-MM-DD]"
-                                android:inputType="textMultiLine"
-                                android:scrollbarAlwaysDrawVerticalTrack="true"
-                                android:scrollbarSize="8sp"
-                                android:scrollbarStyle="outsideInset"
-                                android:scrollbars="vertical"
-                                android:shadowColor="@android:color/white"
-                                android:textColor="@android:color/white"
-                                android:textColorHint="@android:color/white"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/NameDetails" />
+            <EditText
+                android:id="@+id/DateDetails"
+                android:layout_width="392dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="32dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Date [YYYY-MM-DD]"
+                android:inputType="textMultiLine"
+                android:scrollbarAlwaysDrawVerticalTrack="true"
+                android:scrollbarSize="8sp"
+                android:scrollbarStyle="outsideInset"
+                android:scrollbars="vertical"
+                android:shadowColor="@android:color/white"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/NameDetails"
+                app:layout_constraintVertical_bias="0.0" />
 
-                            <androidx.cardview.widget.CardView
-                                android:id="@+id/addnews"
-                                android:layout_width="139dp"
-                                android:layout_height="51dp"
-                                android:layout_alignParentStart="true"
-                                android:layout_marginBottom="32dp"
-                                app:cardBackgroundColor="@color/colorAccent"
-                                app:cardCornerRadius="25dp"
-                                app:cardElevation="10dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/NameDetails"
-                                app:layout_constraintVertical_bias="0.91">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/addnews"
+                android:layout_width="139dp"
+                android:layout_height="51dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="32dp"
+                app:cardBackgroundColor="@color/colorAccent"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/DateDetails"
+                app:layout_constraintVertical_bias="0.91">
 
-                                <TextView
-                                    android:id="@+id/addnewsText"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_centerInParent="true"
-                                    android:layout_gravity="center"
-                                    android:text="ADD NEWS"
-                                    android:textColor="#fff"
-                                    android:textSize="18sp"
-                                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/addnewsText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:text="ADD NEWS"
+                    android:textColor="#fff"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
-                            </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <ImageView
                 android:id="@+id/imageView3"
@@ -178,5 +171,6 @@
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -8,25 +8,6 @@
     android:layout_height="match_parent"
     android:background="@color/colorPrimary">
 
-
-<!--    <TextView-->
-<!--        android:id="@+id/textView2"-->
-<!--        android:layout_width="252dp"-->
-<!--        android:layout_height="60dp"-->
-<!--        android:layout_marginTop="30dp"-->
-<!--        android:layout_marginBottom="10dp"-->
-<!--        android:fontFamily="sans-serif"-->
-<!--        android:text="Top News"-->
-<!--        android:textAlignment="center"-->
-<!--        android:textColor="@android:color/black"-->
-<!--        android:textSize="36sp"-->
-<!--        android:textStyle="bold"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/newslist"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.5"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/newslist"
         android:layout_width="409dp"

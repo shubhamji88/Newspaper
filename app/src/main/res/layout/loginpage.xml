@@ -45,7 +45,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_gravity="center"
-            android:text="STARTUP"
+            android:text="@string/startup"
             android:textColor="#fff"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -73,7 +73,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_gravity="center"
-            android:text="INVESTOR"
+            android:text="@string/investor"
             android:textColor="#fff"
             android:textSize="18sp"
             android:textStyle="bold" />

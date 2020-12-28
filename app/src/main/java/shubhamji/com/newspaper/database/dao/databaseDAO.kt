@@ -12,12 +12,12 @@ interface databaseDAO {
     fun insertArtcle(News: List<News>)
     @Update(onConflict = OnConflictStrategy.REPLACE)
     fun update(News: List<News>)
-    @Query("select * from news order by newsid")
-    fun getnews(): LiveData<List<News>>
+//    @Query("select * from news order by newsid")
+//    fun getnews(): LiveData<List<News>>
     @Query("select * from news order by newsid limit 1")
     fun getLatestnews(): News?
     @Query("select * from news order by newsid desc")
-    fun getLatest(): LiveData<List<News>>
+    fun getNewsList(): LiveData<List<News>>
     @Query("delete from news")
     fun clear()
 }

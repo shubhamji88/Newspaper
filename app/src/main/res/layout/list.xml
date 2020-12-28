@@ -38,9 +38,9 @@
 
                 <ImageView
                     android:id="@+id/newsimage1"
-                    android:layout_width="35px"
+                    android:layout_width="25dp"
                     app:imageUrl="@{newss.urlToImage}"
-                    android:layout_height="35px"
+                    android:layout_height="25dp"
                     android:src="@mipmap/ic_launcher"
                     android:scaleType="centerCrop"
                     />
@@ -50,11 +50,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
                     android:layout_weight="1"
-                    android:text="Fox News "
+                    android:text="@string/dummy_news_name"
                     android:textColor="@color/listsub1"
-                    android:textSize="11dp"
+                    android:textSize="12sp"
                     app:author="@{newss}" />
 
                 <TextView
@@ -63,9 +63,9 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="0.6"
-                    android:text="2 day ago"
+                    android:text="@string/dummy_date"
                     android:textColor="@color/listsub1"
-                    android:textSize="11dp"
+                    android:textSize="12sp"
                     app:publishedAt="@{newss}" />
 
                 <ImageView
@@ -93,14 +93,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:layout_marginRight="5dp"
+                    android:layout_marginEnd="5dp"
                     >
 
                     <TextView
                         android:id="@+id/news"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Trump’s Plan for AmericanMade iPhonew Wold Be Disastrous. Trump’s Plan for AmericanMade iPhonew Wold Be Disastrous"
+                        android:text="@string/dummy_news_title"
                         android:lines="3"
                         app:headline="@{newss}"
                         android:textSize="15dp"
@@ -113,25 +113,14 @@
                         android:id="@+id/newssub"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Why even a President Trump couldn’t make Apple manufacture iPhone in the state."
+                        android:text="@string/dummy_news_description"
                         android:layout_marginTop="13dp"
-                        android:textSize="12dp"
+                        android:textSize="12sp"
                         app:body="@{newss}"
                         android:textColor="@color/listsub1"
                         android:lineSpacingExtra="3dp"
                         />
 
-
-<!--                    <TextView-->
-<!--                        android:id="@+id/intrest"-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:text="You've shown interest in iPhone"-->
-<!--                        android:textSize="10dp"-->
-<!--                        android:textColor="@color/listsub2"-->
-<!--                        android:maxLines="1"-->
-<!--                        android:layout_marginTop="13dp"-->
-<!--                        />-->
 
                 </LinearLayout>
 
