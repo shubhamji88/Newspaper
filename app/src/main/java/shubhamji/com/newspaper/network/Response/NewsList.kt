@@ -20,7 +20,6 @@ fun NewsList.toArticleDatabase():List<News>{
             content = it?.content,
             description = it?.description,
             publishedAt = it?.publishedAt,
-//            source = it.articles[0].source,
             title = it?.title,
             urlToImage = it?.urlToImage,
             url = it?.url
