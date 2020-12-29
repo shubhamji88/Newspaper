@@ -19,7 +19,7 @@ import shubhamji.com.newspaper.databinding.StartupBinding
 
 @Suppress("DEPRECATION")
 class startup: Fragment() {
-
+    private lateinit var viewModel: startupViewModel
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -30,23 +30,29 @@ class startup: Fragment() {
         val application= requireNotNull(this.activity).application
         val datasource=NewsDatabase.getInstance(application).newsdatabaseDAO
         val viewModelFactory=startupViewModelFactory(datasource,application)
-        val viewModel= ViewModelProviders.of(this,viewModelFactory).get(startupViewModel::class.java)
+        viewModel= ViewModelProviders.of(this,viewModelFactory).get(startupViewModel::class.java)
         (requireActivity() as MainActivity).supportActionBar!!.hide()
         binding.addnews.setOnClickListener {
-            val title = binding.title.text.toString()
-            val body = binding.details.text.toString()
-            val name=binding.NameDetails.text.toString()
-            val date=binding.DateDetails.text.toString()
-            val website="https://www."+binding.Website.text.toString()
-            viewModel.addnews(title, body,name,date,website)
-            findNavController().navigate(R.id.action_startup_to_loginPage)
-            Snackbar.make(
-                activity!!.findViewById(android.R.id.content),
-                "Your News was added Successfully!!",
-                Snackbar.LENGTH_SHORT
-            ).show()
+            addNewsClickListner(it,binding)
 
         }
         return binding.root
     }
+
+    private fun addNewsClickListner(view: View?,binding : StartupBinding) {
+        val title = binding.title.text.toString()
+        val body = binding.details.text.toString()
+        val name=binding.NameDetails.text.toString()
+        val date=binding.DateDetails.text.toString()
+        val website="https://www."+binding.Website.text.toString()
+        viewModel.addnews(title, body,name,date,website)
+        findNavController().navigate(R.id.action_startup_to_loginPage)
+        Snackbar.make(
+            activity!!.findViewById(android.R.id.content),
+            "Your News was added Successfully!!",
+            Snackbar.LENGTH_SHORT
+        ).show()
+
+    }
+
 }
