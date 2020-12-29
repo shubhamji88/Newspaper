@@ -6,7 +6,7 @@ import android.view.*
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import shubhamji.com.newspaper.MainActivity
 import shubhamji.com.newspaper.R
@@ -22,22 +22,18 @@ class Investor:Fragment(){
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val binding: InvestorBinding =
-            DataBindingUtil.inflate(
-                inflater,
-                R.layout.investor, container, false
-            )
+        val binding: InvestorBinding =DataBindingUtil.inflate(inflater,R.layout.investor, container, false)
         (requireActivity() as MainActivity).supportActionBar!!.hide()
         val application = requireNotNull(this.activity).application
         val dataSource = NewsDatabase.getInstance(application).newsdatabaseDAO
         viewModelFactory =
             investorViewModelFactory(dataSource, application)
-        viewModel = ViewModelProviders.of(this, viewModelFactory).get(investorViewModel::class.java)
+        viewModel = ViewModelProvider(this, viewModelFactory).get(investorViewModel::class.java)
         val adapter = InvestorAdapter(ClickListner { url: String ->
             view?.findNavController()?.navigate(InvestorDirections.actionInvestorToWebview2(url))
         })
-
         binding.newslist.adapter=adapter
+
         viewModel.newsList.observe(viewLifecycleOwner, Observer {
             it.let {
                 adapter.submitList(it)
@@ -66,7 +62,6 @@ class Investor:Fragment(){
             menu.findItem(R.id.share)?.setVisible(false)
         }
     }
-
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId)
         {
