@@ -9,7 +9,6 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import shubhamji.com.newspaper.databinding.LoginpageBinding
 class LoginPage: Fragment() {
-    lateinit var tool: androidx.appcompat.app.ActionBar
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -19,7 +18,7 @@ class LoginPage: Fragment() {
             inflater,
             R.layout.loginpage, container, false
         )
-        tool = (requireActivity() as MainActivity).supportActionBar!!
+
 
         binding.investorNav.setOnClickListener { view: View ->
             view.findNavController().navigate(
@@ -60,9 +59,14 @@ class LoginPage: Fragment() {
     }
 
     override fun onStart() {
+        setupActionBar()
+        super.onStart()
+    }
+
+    private fun setupActionBar() {
+        val tool = (requireActivity() as MainActivity).supportActionBar!!
         tool.show()
         tool.setTitle("        SILICON PAPER")
-        super.onStart()
     }
 
 }
