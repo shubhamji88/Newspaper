@@ -1,5 +1,5 @@
 ## Silicon Paper
-This is an kotlin app for publicizeing the new start-up's by a news service which only have news about different start-up around the globe.
+This is an kotlin app for publicizing the new start-up's by a news service which only have news about different start-up around the globe.
 You can add news of your startup and also see the the other around the globe.
 
 Link to APK: https://drive.google.com/file/d/1ywy3HgHPlnEu7BcMQWDBlfxycILHMYfz/view?usp=sharing
